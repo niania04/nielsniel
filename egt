@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>for: my sweeeeet boyfriendd!!!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom right, #ffe4e6, #fbcfe8);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .note, .gallery {
+      animation: fadeIn 2s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .note {
+      background: white;
+      padding: 30px;
+      border-radius: 30px;
+      border: 4px solid #fbcfe8;
+      box-shadow: 0 10px 20px rgba(255, 182, 193, 0.3);
+      margin-bottom: 40px;
+    }
+
+    .note h1 {
+      color: #be185d;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .note p {
+      color: #9d174d;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 5px 10px rgba(255, 182, 193, 0.4);
+    }
+
+    .question-screen {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .question-screen h2 {
+      font-size: 2em;
+      color: #9d174d;
+      margin-bottom: 20px;
+    }
+
+    .start-button {
+      background: #ec4899;
+      color: white;
+      font-size: 1.2em;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .start-button:hover {
+      background: #db2777;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="question" class="question-screen">
+    <h2>kiw kiw hai cowoo, mau liat sesuatu ndaa?</h2>
+    <button class="start-button" onclick="showContent()">OMG MAU BANGET</button>
+  </div>
+
+  <div id="content" class="container" style="display: none;">
+    <div class="note">
+      <h1>for: my very very sweeeeet boyfrienddd!!</h1>
+      <p>
+        haiii nieell! how are youu? are u feeling well? if u don't, please call 911 immediately (me)<br />
+        omggg semangat yaaa, jangan kelelahan atau lupa makann! keep urself healthy, if u don't, just call a doctor (me)<br />
+        jangan marah marah yaaaa, masa cewe secantik ini dikasih dry text hohoho. If something is bothering u, just tell me okii!!!<br /><br />
+        <span style="color:#be185d;">I LooOveeEe yOou, 💕</span>
+      </p>
+    </div>
+
+    <div class="gallery">
+      <img src="images/us1.jpg" alt="Us 1">
+      <img src="images/us2.jpg" alt="Us 2">
+      <img src="images/us3.jpg" alt="Us 3">
+      <img src="images/us4.jpg" alt="Us 4">
+    </div>
+  </div>
+
+  <script>
+    function showContent() {
+      document.getElementById('question').style.display = 'none';
+      const content = document.getElementById('content');
+      content.style.display = 'block';
+
+      // Trigger animations
+      setTimeout(() => {
+        content.classList.add('container');
+        document.querySelector('.note').style.opacity = 1;
+        document.querySelector('.gallery').style.opacity = 1;
+      }, 100);
+    }
+  </script>
+</body>
+</html>
